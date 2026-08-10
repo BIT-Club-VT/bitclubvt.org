@@ -2,9 +2,9 @@
 
 Welcome to the BIT Club Website Repository! Here, you can find the code that makes our website run.
 
-If you have any website-specific questions, you can contact our Web Design Chair, Brady Cook, at bradyc05@vt.edu
+If you have any website-specific questions, you can contact our Web Design Chair, Carter Hawkins, at carterhawkins@vt.edu.
 
-For other administrative-level questions, you can contact our President, Madison Bui, at madison6306@vt.edu, or our Vice President, Chris Zhong, at resonance@vt.edu.
+For other administrative-level questions, you can contact our President, Roman Willis, at romanwillis@vt.edu, or our vice presidents Asma Adiba and Brady Cook at asma23@vt.edu and bradyc05@vt.edu.
 
 Happy browsing!
 

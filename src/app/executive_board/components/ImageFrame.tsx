@@ -1,14 +1,16 @@
-"use client";
-import React from "react";
-import Image from "next/image";
+import Image, { type StaticImageData } from "next/image";
 
 interface ImageFrameProps {
-  imageSrc: string;
+  imageSrc: StaticImageData;
   alt: string;
   caption?: string;
 }
 
-export default function ImageFrame({ imageSrc, alt, caption }: ImageFrameProps) {
+export default function ImageFrame({
+  imageSrc,
+  alt,
+  caption,
+}: ImageFrameProps) {
   return (
     <section className="py-24 bg-[#FDF8E8] flex justify-center px-4">
       <div className="bg-[#F26645] rounded-2xl shadow-lg p-10 sm:p-12 md:p-16 lg:p-20 xl:p-24 max-w-md sm:max-w-xl md:max-w-4xl lg:max-w-5xl w-full flex flex-col items-center">
@@ -16,9 +18,7 @@ export default function ImageFrame({ imageSrc, alt, caption }: ImageFrameProps) 
         <Image
           src={imageSrc}
           alt={alt}
-          width={1000}
-          height={1000}
-          className="rounded-xl shadow-md object-cover w-full h-auto"
+          className="h-auto w-full rounded-xl object-contain shadow-md"
         />
 
         {/* Optional caption */}

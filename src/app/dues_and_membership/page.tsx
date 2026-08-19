@@ -1,7 +1,7 @@
 import Navbar from '@/app/components/Navbar'
 import Footer from '../components/Footer';
 import type { Metadata } from 'next';
-import QuestionsAndAnswers from '../components/Q&A';
+import QuestionsAndAnswers from './components/Q&A';
 
 export const metadata: Metadata = {
   title: "Dues & Membership",

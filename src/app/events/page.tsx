@@ -1,5 +1,5 @@
 import Navbar from '@/app/components/Navbar'
-import Calendar from '../components/Calendar';
+import Calendar from './components/Calendar';
 import Footer from '../components/Footer';
 import type { Metadata } from 'next';
 

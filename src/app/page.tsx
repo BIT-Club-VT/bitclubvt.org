@@ -3,9 +3,9 @@
 
 import Navbar from '@/app/components/Navbar'
 import Footer from '@/app/components/Footer'
-import Slideshow from '@/app/components/Slideshow'
-import PurposeSection from './components/Purpose';
-import WhyJoinSection from './components/WhyJoin';
+import Slideshow from './home/components/Slideshow'
+import PurposeSection from './home/components/Purpose';
+import WhyJoinSection from './home/components/WhyJoin';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {

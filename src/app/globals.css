@@ -51,3 +51,67 @@ strong, b {
   animation: slide-down 1s ease-out forwards;
 }
 
+@keyframes board-modal-backdrop-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes board-modal-panel-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes board-modal-backdrop-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes board-modal-panel-out {
+  from {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(12px) scale(0.97);
+  }
+}
+
+.board-modal-backdrop-in {
+  animation: board-modal-backdrop-in 180ms ease-out both;
+}
+
+.board-modal-panel-in {
+  animation: board-modal-panel-in 220ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.board-modal-backdrop-out {
+  animation: board-modal-backdrop-out 160ms ease-in both;
+}
+
+.board-modal-panel-out {
+  animation: board-modal-panel-out 160ms ease-in both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .board-modal-backdrop-in,
+  .board-modal-panel-in,
+  .board-modal-backdrop-out,
+  .board-modal-panel-out {
+    animation: none;
+  }
+}

@@ -95,7 +95,7 @@ export default function Navbar() {
     <nav
       ref={navRef}
       aria-label="Primary navigation"
-      className="bg-[#B83A20] py-2 px-4 md:px-8 sticky top-0 z-50"
+      className="bg-[var(--color-teal-deep)] py-2 px-4 md:px-8 sticky top-0 z-50"
     >
       {/* MENU FOR DESKTOP LAYOUTS */}
       <div className="max-w-7xl mx-auto flex items-center justify-between h-16">
@@ -109,13 +109,13 @@ export default function Navbar() {
                 fontFamily: "var(--font-encode-sans-condensed), sans-serif",
               }}
               aria-current={pathname === link.href ? "page" : undefined}
-              className="relative text-white hover:text-[#FDF8E8] transition-colors duration-300"
+              className="relative text-[var(--color-on-dark)] hover:text-[var(--color-peach)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-peach)] transition-colors duration-300"
             >
               {link.name}
               {pathname === link.href && (
                 <span
                   aria-hidden="true"
-                  className="absolute left-0 -bottom-1 h-0.5 w-full bg-white"
+                  className="absolute left-0 -bottom-1 h-0.5 w-full bg-[var(--color-on-dark)]"
                 ></span>
               )}
             </Link>
@@ -129,7 +129,7 @@ export default function Navbar() {
               aria-controls="desktop-resources-menu"
               aria-haspopup="true"
               onClick={() => setIsResourcesOpen((open) => !open)}
-              className="text-white hover:text-[#FDF8E8] transition-colors duration-300 flex items-center"
+              className="text-[var(--color-on-dark)] hover:text-[var(--color-peach)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-peach)] transition-colors duration-300 flex items-center"
               style={{
                 fontFamily: "var(--font-encode-sans-condensed), sans-serif",
               }}
@@ -144,7 +144,7 @@ export default function Navbar() {
             {isResourcesOpen && (
               <div
                 id="desktop-resources-menu"
-                className="absolute left-0 mt-2 w-56 bg-[#FDF8E8] rounded-lg shadow-lg border border-gray-200 py-2 z-50"
+                className="absolute left-0 mt-2 w-56 bg-[var(--color-paper)] rounded-lg shadow-lg border border-[var(--color-teal)] py-2 z-50"
                 onMouseLeave={() => setIsResourcesOpen(false)} // optional: close on hover leave
               >
                 {resourceLinks.map((res) => (
@@ -153,7 +153,7 @@ export default function Navbar() {
                     href={res.href}
                     onClick={() => setIsResourcesOpen(false)} // closes when link clicked
                     aria-current={pathname === res.href ? "page" : undefined}
-                    className="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-[#A93620] transition-colors duration-200"
+                    className="block px-4 py-2 text-[var(--color-ink)] hover:bg-[var(--color-peach)] focus-visible:bg-[var(--color-peach)] focus-visible:outline-2 focus-visible:outline-offset-[-2px] focus-visible:outline-[var(--color-teal-deep)] transition-colors duration-200"
                     style={{
                       fontFamily:
                         "var(--font-encode-sans-condensed), sans-serif",
@@ -174,7 +174,7 @@ export default function Navbar() {
           aria-label="Open navigation menu"
           aria-expanded={isOpen}
           aria-controls="mobile-navigation-menu"
-          className="md:hidden text-white text-2xl cursor-pointer"
+          className="md:hidden text-[var(--color-on-dark)] text-2xl cursor-pointer focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-peach)]"
           onClick={() => setIsOpen(true)}
         >
           <FaBars aria-hidden="true" />
@@ -186,7 +186,7 @@ export default function Navbar() {
         ref={mobileMenuRef}
         id="mobile-navigation-menu"
         aria-hidden={!isOpen}
-        className={`md:hidden fixed top-0 left-0 w-full h-screen bg-[#B83A20] z-40 transform transition-transform duration-500 ease-in-out ${
+        className={`md:hidden fixed top-0 left-0 w-full h-screen bg-[var(--color-teal-deep)] z-40 transform transition-transform duration-500 ease-in-out ${
           isOpen
             ? "translate-x-0"
             : "-translate-x-full pointer-events-none"
@@ -201,7 +201,7 @@ export default function Navbar() {
             setIsResourcesOpen(false);
             setIsOpen(false);
           }}
-          className="absolute top-4 left-4 text-white text-3xl"
+          className="absolute top-4 left-4 text-[var(--color-on-dark)] text-3xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-peach)]"
         >
           <span aria-hidden="true">✕</span>
         </button>
@@ -217,7 +217,7 @@ export default function Navbar() {
                 setIsResourcesOpen(false);
                 setIsOpen(false);
               }}
-              className="text-white text-2xl hover:text-[#FDF8E8] transition-colors duration-300"
+              className="text-[var(--color-on-dark)] text-2xl hover:text-[var(--color-peach)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-peach)] transition-colors duration-300"
               style={{
                 fontFamily: "var(--font-encode-sans-condensed), sans-serif",
               }}
@@ -235,7 +235,7 @@ export default function Navbar() {
               aria-haspopup="true"
               tabIndex={isOpen ? undefined : -1}
               onClick={() => setIsResourcesOpen((open) => !open)}
-              className="text-white text-2xl flex items-center hover:text-[#FDF8E8] transition-colors duration-300"
+              className="text-[var(--color-on-dark)] text-2xl flex items-center hover:text-[var(--color-peach)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-peach)] transition-colors duration-300"
               style={{
                 fontFamily: "var(--font-encode-sans-condensed), sans-serif",
               }}
@@ -261,7 +261,7 @@ export default function Navbar() {
                       setIsResourcesOpen(false);
                       setIsOpen(false);
                     }}
-                    className="text-white text-xl hover:text-[#FDF8E8] transition-colors duration-200"
+                    className="text-[var(--color-on-dark)] text-xl hover:text-[var(--color-peach)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-peach)] transition-colors duration-200"
                   >
                     {res.name}
                   </Link>

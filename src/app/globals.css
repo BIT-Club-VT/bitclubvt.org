@@ -8,15 +8,26 @@
   /* Header & bold font */
   --font-heading: var(--font-hussar-bold);
 
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  /*
+   * BIT Club color system
+   * Change colors here only; site components reference these variables.
+   */
+  --color-paper: #F3E8E2;
+  --color-coral: #F26645;
+  --color-coral-deep: #96331F;
+  --color-orange: #FE9659;
+  --color-peach: #FFC38D;
+  --color-teal: #39818F;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Accessible companions for text and interactive surfaces */
+  --color-ink: #102A2F;
+  --color-teal-deep: #205963;
+  --color-on-dark: #FFFFFF;
+  --color-overlay: #000000;
+  --color-image-ring: color-mix(in srgb, var(--color-ink) 10%, transparent);
+
+  --background: var(--color-paper);
+  --foreground: var(--color-ink);
 }
 
 /* Styles for the main body*/
@@ -27,6 +38,11 @@ body {
   color: var(--foreground);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: var(--color-peach);
+  color: var(--color-ink);
 }
 
 /*Styles for the headers & bold text*/

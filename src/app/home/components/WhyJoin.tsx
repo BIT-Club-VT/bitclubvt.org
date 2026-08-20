@@ -32,11 +32,11 @@ export default function WhyJoinSection({ header, body, imageSrc }: WhyJoinUsProp
   }, []);
 
   return (
-    <section ref={sectionRef} className="relative bg-[#FDF8E8] overflow-hidden">
+    <section ref={sectionRef} className="relative bg-[var(--color-paper)] overflow-hidden">
       {/* Orange rhombus-shaped background (inversed slope) */}
       <div className="absolute inset-0 overflow-hidden">
         <div
-          className="bg-[#B83A20] absolute w-full h-full top-0 left-0"
+          className="bg-[var(--color-coral)] absolute w-full h-full top-0 left-0"
           style={{
             clipPath: "polygon(0 0, 100% 10%, 100% 100%, 0% 90%)",
           }}
@@ -51,10 +51,10 @@ export default function WhyJoinSection({ header, body, imageSrc }: WhyJoinUsProp
           className={`flex-1 text-left transition-all duration-2000 ease-out
           ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-12"}`}
         >
-          <h2 className="text-3xl sm:text-4xl font-bold text-white mb-6">
+          <h2 className="text-3xl sm:text-4xl font-bold text-[var(--color-ink)] mb-6">
             {header}
           </h2>
-          <p className="text-base sm:text-lg text-white leading-relaxed">
+          <p className="text-base sm:text-lg text-[var(--color-ink)] leading-relaxed">
             {body}
           </p>
         </div>

@@ -3,7 +3,7 @@ export default function Calendar() {
     "https://calendar.google.com/calendar/embed?src=virginiatechbitclub%40gmail.com&ctz=America%2FNew_York";
 
   return (
-    <section className="bg-[#FDF8E8] py-12 px-4 text-black">
+    <section className="bg-[var(--color-paper)] py-12 px-4 text-[var(--color-ink)]">
       <div className="max-w-5xl mx-auto text-center">
         <h1 className="text-3xl sm:text-4xl font-bold mb-4">
           Check out our Google Calendar!
@@ -29,7 +29,7 @@ export default function Calendar() {
               href={calendarSrc}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#B83A20] hover:text-[#861F41]"
+              className="text-[var(--color-teal-deep)] font-semibold underline decoration-[var(--color-coral)] decoration-2 underline-offset-4 hover:text-[var(--color-coral-deep)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-teal-deep)]"
             >
               HERE
             </a>

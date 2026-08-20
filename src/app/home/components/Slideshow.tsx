@@ -43,12 +43,12 @@ export default function MainPageSlideshow() {
   }, []);
 
   return (
-    <div className="relative min-h-screen flex items-center justify-center bg-black text-white overflow-hidden">
+    <div className="relative min-h-screen flex items-center justify-center bg-[var(--color-ink)] text-[var(--color-on-dark)] overflow-hidden">
       {images.map((src, index) => (
         <img
           key={index}
           src={src}
-          alt={`Slide ${index + 1}`}
+          alt=""
           className={`
             absolute inset-0 w-full h-full object-cover transition-opacity duration-1000
             ${index === current ? "opacity-60" : "opacity-0"}
@@ -57,7 +57,7 @@ export default function MainPageSlideshow() {
       ))}
 
       <div className="relative z-10 text-center px-4">
-         <img src="/main_logos_and_assets/logos/club_logos/bit_logo_text_transparent_extended.png" alt="Header Test" className="mx-auto h-32 md:h-48" />
+         <img src="/main_logos_and_assets/logos/club_logos/bit_logo_text_transparent_extended.png" alt="BIT Club at Virginia Tech" className="mx-auto h-32 md:h-48" />
 
         {/* <h1 className="text-4xl sm:text-5xl md:text-8xl font-extrabold">
           BIT Club

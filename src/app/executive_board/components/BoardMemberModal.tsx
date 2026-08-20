@@ -69,7 +69,7 @@ export default function BoardMemberModal({
       aria-describedby={descriptionId}
       className={`${
         isClosing ? "board-modal-backdrop-out" : "board-modal-backdrop-in"
-      } fixed inset-0 z-50 m-0 h-dvh max-h-none w-screen max-w-none border-0 bg-black p-0 backdrop:bg-transparent`}
+      } fixed inset-0 z-50 m-0 h-dvh max-h-none w-screen max-w-none border-0 bg-[var(--color-overlay)] p-0 backdrop:bg-transparent`}
       onCancel={(event) => {
         event.preventDefault();
         closeModal();
@@ -88,13 +88,13 @@ export default function BoardMemberModal({
           ref={panelRef}
           className={`${
             isClosing ? "board-modal-panel-out" : "board-modal-panel-in"
-          } relative flex max-h-[calc(100dvh-2rem)] w-full max-w-3xl flex-col overflow-y-auto rounded-2xl bg-[#FDF8E8] p-6 pt-16 shadow-xl md:flex-row md:items-start md:pt-6`}
+          } relative flex max-h-[calc(100dvh-2rem)] w-full max-w-3xl flex-col overflow-y-auto rounded-2xl bg-[var(--color-paper)] p-6 pt-16 text-[var(--color-ink)] shadow-xl md:flex-row md:items-start md:pt-6`}
         >
           <div className="mb-6 flex flex-none justify-center md:mb-0 md:mr-6">
             <Image
               src={member.imageSrc}
               alt={`Portrait of ${member.name}`}
-              className="h-auto max-h-[55dvh] w-auto max-w-full rounded-xl object-contain shadow-md ring-1 ring-black/10 md:max-h-[calc(100dvh-6rem)]"
+              className="h-auto max-h-[55dvh] w-auto max-w-full rounded-xl object-contain shadow-md ring-1 ring-[var(--color-image-ring)] md:max-h-[calc(100dvh-6rem)]"
             />
           </div>
 
@@ -103,12 +103,12 @@ export default function BoardMemberModal({
               ref={titleRef}
               id={titleId}
               tabIndex={-1}
-              className="text-2xl font-bold text-[#861F41] focus:outline-none"
+              className="text-2xl font-bold text-[var(--color-coral-deep)] focus:outline-none"
             >
               {member.name}
             </h3>
-            <p className="mb-4 font-medium text-[#B83A20]">{member.degree}</p>
-            <div id={descriptionId} className="mb-4 text-gray-700">
+            <p className="mb-4 font-medium text-[var(--color-teal-deep)]">{member.degree}</p>
+            <div id={descriptionId} className="mb-4 text-[var(--color-ink)]">
               {member.bio}
             </div>
             {member.linkedin && (
@@ -116,7 +116,7 @@ export default function BoardMemberModal({
                 href={member.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block rounded-lg bg-[#B83A20] px-4 py-2 text-white transition hover:bg-[#9F301D] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#861F41]"
+                className="inline-block rounded-lg bg-[var(--color-coral)] px-4 py-2 font-semibold text-[var(--color-ink)] transition hover:bg-[var(--color-orange)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-ink)]"
               >
                 View LinkedIn
               </a>
@@ -126,7 +126,7 @@ export default function BoardMemberModal({
           <button
             type="button"
             aria-label="Close board member details"
-            className="absolute right-3 top-3 flex h-12 w-12 cursor-pointer items-center justify-center rounded-full text-gray-500 transition-colors hover:bg-black/10 hover:text-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#861F41]"
+            className="absolute right-3 top-3 flex h-12 w-12 cursor-pointer items-center justify-center rounded-full text-[var(--color-teal-deep)] transition-colors hover:bg-[var(--color-peach)] hover:text-[var(--color-ink)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[var(--color-teal-deep)]"
             onClick={closeModal}
           >
             <svg

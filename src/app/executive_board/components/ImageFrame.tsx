@@ -12,8 +12,8 @@ export default function ImageFrame({
   caption,
 }: ImageFrameProps) {
   return (
-    <section className="py-24 bg-[#FDF8E8] flex justify-center px-4">
-      <div className="bg-[#B83A20] rounded-2xl shadow-lg p-10 sm:p-12 md:p-16 lg:p-20 xl:p-24 max-w-md sm:max-w-xl md:max-w-4xl lg:max-w-5xl w-full flex flex-col items-center">
+    <section className="py-24 bg-[var(--color-paper)] flex justify-center px-4">
+      <div className="bg-[var(--color-coral)] rounded-2xl shadow-lg p-10 sm:p-12 md:p-16 lg:p-20 xl:p-24 max-w-md sm:max-w-xl md:max-w-4xl lg:max-w-5xl w-full flex flex-col items-center">
         {/* Image */}
         <Image
           src={imageSrc}
@@ -23,7 +23,7 @@ export default function ImageFrame({
 
         {/* Optional caption */}
         {caption && (
-          <p className="mt-6 text-center text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-medium text-[#FDF8E8]">
+          <p className="mt-6 text-center text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-medium text-[var(--color-ink)]">
             {caption}
           </p>
         )}

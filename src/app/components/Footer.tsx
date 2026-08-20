@@ -30,7 +30,7 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer ref={footerRef} className="bg-[#2F6D78] text-white py-8 relative overflow-hidden">
+    <footer ref={footerRef} className="bg-[var(--color-teal-deep)] text-[var(--color-on-dark)] py-8 relative overflow-hidden border-t-8 border-[var(--color-teal)]">
       <div
       className={`max-w-7xl mx-auto text-center transition-all duration-3000 ease-out
       ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
@@ -45,19 +45,19 @@ export default function Footer() {
 
         <div className="flex flex-wrap justify-center items-center gap-6 text-4xl sm:text-5xl md:text-6xl">
           {/* START OF ICONS */}
-          <a href="mailto:virginiatechbitclub@gmail.com" aria-label="Email" className="hover:text-white/70 transition-colors duration-600">
+          <a href="mailto:virginiatechbitclub@gmail.com" aria-label="Email" className="hover:text-[var(--color-peach)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-peach)] transition-colors duration-600">
             <FontAwesomeIcon icon={faEnvelope} />
           </a>
-          <a href="https://discord.com/invite/Z7gn4wYxsQ" target="_blank" rel="noopener noreferrer" aria-label="Discord" className="hover:text-white/70 transition-colors duration-600">
+          <a href="https://discord.com/invite/Z7gn4wYxsQ" target="_blank" rel="noopener noreferrer" aria-label="Discord" className="hover:text-[var(--color-peach)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-peach)] transition-colors duration-600">
             <FontAwesomeIcon icon={faDiscord} />
           </a>
-          <a href="https://www.instagram.com/bitclubvt/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-white/70 transition-colors duration-600">
+          <a href="https://www.instagram.com/bitclubvt/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="hover:text-[var(--color-peach)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-peach)] transition-colors duration-600">
             <FontAwesomeIcon icon={faInstagram} />
           </a>
-          <a href="https://www.linkedin.com/company/bitclubvt/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-white/70 transition-colors duration-600">
+          <a href="https://www.linkedin.com/company/bitclubvt/posts/?feedView=all" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" className="hover:text-[var(--color-peach)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-peach)] transition-colors duration-600">
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
-          <a href="https://linktr.ee/vtbitclub/" target="_blank" rel="noopener noreferrer" aria-label="Linktree" className="hover:text-white/70 transition-colors duration-600">
+          <a href="https://linktr.ee/vtbitclub/" target="_blank" rel="noopener noreferrer" aria-label="Linktree" className="hover:text-[var(--color-peach)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-peach)] transition-colors duration-600">
             <FontAwesomeIcon icon={faLinktree} />
           </a>
 
@@ -67,7 +67,7 @@ export default function Footer() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="GroupMe"
-            className="hover:opacity-80 transition duration-300"
+            className="hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-peach)] transition duration-300"
           >
             <div className="flex justify-center items-center">
               <Image
@@ -80,13 +80,13 @@ export default function Footer() {
             </div>
           </a>
           {/* GobblerConnect Image (since an icon doesn't exist)*/}
-          <a href="https://gobblerconnect.vt.edu/organization/bitclub" target="_blank" rel="noopener noreferrer" aria-label="GobblerConnect" className="hover:opacity-80 transition duration-300">
+          <a href="https://gobblerconnect.vt.edu/organization/bitclub" target="_blank" rel="noopener noreferrer" aria-label="GobblerConnect" className="hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-peach)] transition duration-300">
             <div className="flex justify-center items-center">
               <Image
                 src="/main_logos_and_assets/logos/other_logos/gobblerconnect_logo_transparent.png"
                 alt="GobblerConnect"
                 width={300}
-                height={35}
+                height={60}
                 className="object-contain"
               />
             </div>

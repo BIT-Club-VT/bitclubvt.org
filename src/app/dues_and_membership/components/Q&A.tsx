@@ -10,9 +10,9 @@ interface QuestionsAndAnswersProps {
 
 export default function QuestionsAndAnswers({ title, items }: QuestionsAndAnswersProps) {
   return (
-    <section className="py-20 bg-[#FDF8E8] px-6 md:px-12 lg:px-24">
+    <section className="py-20 bg-[var(--color-paper)] px-6 text-[var(--color-ink)] md:px-12 lg:px-24">
       {/* Title */}
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-black">
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
         {title}
       </h2>
 
@@ -21,12 +21,12 @@ export default function QuestionsAndAnswers({ title, items }: QuestionsAndAnswer
         {items.map((qa, idx) => (
           <div key={idx} className="space-y-3">
             {/* Question */}
-            <h3 className="text-xl md:text-2xl font-semibold text-[#B83A20]">
+            <h3 className="text-xl md:text-2xl font-semibold text-[var(--color-coral-deep)]">
               {qa.question}
             </h3>
 
             {/* Answer */}
-            <p className="text-lg md:text-xl text-[#861F41] leading-relaxed">
+            <p className="text-lg md:text-xl text-[var(--color-ink)] leading-relaxed">
               {qa.answer}
             </p>
           </div>

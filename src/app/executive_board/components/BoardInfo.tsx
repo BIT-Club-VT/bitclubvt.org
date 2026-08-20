@@ -28,14 +28,14 @@ export default function BoardInfo({ groups }: BoardInfoProps) {
       : "w-fit max-w-full";
 
   return (
-    <section className="flex justify-center bg-[#FDF8E8] px-4 py-20">
+    <section className="flex justify-center bg-[var(--color-paper)] px-4 py-20">
       <div className={`grid gap-8 ${groupLayout}`}>
         {groups.map((group) => (
           <div
             key={group.title}
-            className="min-w-0 rounded-2xl bg-[#B83A20] p-4 shadow-lg sm:p-6 md:p-8"
+            className="min-w-0 rounded-2xl bg-[var(--color-teal-deep)] p-4 shadow-lg border-t-8 border-[var(--color-teal)] sm:p-6 md:p-8"
           >
-            <h2 className="mb-6 text-center text-2xl font-bold text-[#FDF8E8] sm:mb-8 sm:text-3xl md:mb-10 md:text-4xl">
+            <h2 className="mb-6 text-center text-2xl font-bold text-[var(--color-on-dark)] sm:mb-8 sm:text-3xl md:mb-10 md:text-4xl">
               {group.title}
             </h2>
 
@@ -45,13 +45,13 @@ export default function BoardInfo({ groups }: BoardInfoProps) {
                   key={member.name}
                   type="button"
                   aria-label={`View details for ${member.name}`}
-                  className="flex min-w-[240px] max-w-[280px] basis-[240px] flex-grow cursor-pointer flex-col items-center rounded-xl bg-[#FDF8E8] p-4 shadow-md transition duration-200 hover:-translate-y-1 hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#861F41] sm:p-6"
+                  className="flex min-w-[240px] max-w-[280px] basis-[240px] flex-grow cursor-pointer flex-col items-center rounded-xl bg-[var(--color-paper)] p-4 shadow-md transition duration-200 hover:-translate-y-1 hover:bg-[var(--color-peach)] hover:shadow-lg focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-peach)] sm:p-6"
                   onClick={(event) => {
                     lastTriggerRef.current = event.currentTarget;
                     setSelectedMember(member);
                   }}
                 >
-                  <span className="relative h-28 w-28 overflow-hidden rounded-full border-4 border-[#B83A20] sm:h-32 sm:w-32 md:h-36 md:w-36">
+                  <span className="relative h-28 w-28 overflow-hidden rounded-full border-4 border-[var(--color-coral)] sm:h-32 sm:w-32 md:h-36 md:w-36">
                     <Image
                       src={member.imageSrc}
                       alt=""
@@ -61,10 +61,10 @@ export default function BoardInfo({ groups }: BoardInfoProps) {
                     />
                   </span>
 
-                  <span className="mt-3 text-center text-base font-semibold text-[#861F41] sm:mt-4 sm:text-lg">
+                  <span className="mt-3 text-center text-base font-semibold text-[var(--color-ink)] sm:mt-4 sm:text-lg">
                     {member.name}
                   </span>
-                  <span className="text-center text-xs text-[#B83A20] sm:text-sm">
+                  <span className="text-center text-xs font-medium text-[var(--color-teal-deep)] sm:text-sm">
                     {member.position}
                   </span>
                 </button>

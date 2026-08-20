@@ -17,10 +17,10 @@ interface ResourceBoxProps {
 
 export default function ResourceBox({ title, resources }: ResourceBoxProps) {
   return (
-    <section className="py-20 bg-[#FDF8E8] flex justify-center">
-      <div className="bg-[#B83A20] rounded-2xl shadow-lg p-8 w-fit max-w-6xl">
+    <section className="py-20 px-4 bg-[var(--color-paper)] flex justify-center">
+      <div className="bg-[var(--color-teal-deep)] rounded-2xl shadow-lg p-8 w-fit max-w-6xl border-t-8 border-[var(--color-teal)]">
         {/* Section Title */}
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-[#FDF8E8]">
+        <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-[var(--color-on-dark)]">
           {title}
         </h2>
 
@@ -29,7 +29,7 @@ export default function ResourceBox({ title, resources }: ResourceBoxProps) {
           {resources.map((resource, idx) => (
             <div
               key={idx}
-              className="bg-[#FDF8E8] rounded-xl overflow-hidden shadow-md w-72 flex flex-col hover:shadow-lg hover:scale-105 transition-[transform,box-shadow] duration-300"
+              className="bg-[var(--color-paper)] rounded-xl overflow-hidden shadow-md w-72 flex flex-col hover:shadow-lg hover:scale-105 transition-[transform,box-shadow] duration-300"
             >
               <div className="relative w-full h-40">
                 <Image
@@ -43,13 +43,13 @@ export default function ResourceBox({ title, resources }: ResourceBoxProps) {
 
               {/* Text Content */}
               <div className="p-6 flex flex-col flex-grow text-center">
-                <h4 className="text-lg font-semibold text-[#861F41] mb-4">
+                <h4 className="text-lg font-semibold text-[var(--color-coral-deep)] mb-4">
                   {resource.title}
                 </h4>
 
                 {/* Optional Description */}
                 {resource.description && (
-                  <p className="text-sm text-[#B83A20] mb-4">
+                  <p className="text-sm text-[var(--color-teal-deep)] mb-4">
                     {resource.description}
                   </p>
                 )}
@@ -60,7 +60,7 @@ export default function ResourceBox({ title, resources }: ResourceBoxProps) {
                     href={resource.buttonLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-auto inline-block bg-[#B83A20] text-[#FDF8E8] px-4 py-2 rounded-lg font-semibold hover:bg-[#9F301D] transition-all duration-300"
+                    className="mt-auto inline-block bg-[var(--color-coral)] text-[var(--color-ink)] px-4 py-2 rounded-lg font-semibold hover:bg-[var(--color-orange)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-ink)] transition-all duration-300"
                   >
                     {resource.buttonText || "View Resource"}
                   </a>

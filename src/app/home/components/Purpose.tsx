@@ -34,7 +34,7 @@ export default function PurposeSection({ header, body, imageSrc }: PurposeProps)
   return (
     <section
       ref={sectionRef}
-      className="bg-[#FDF8E8] py-12 px-4 text-black overflow-hidden"
+      className="bg-[var(--color-paper)] py-12 px-4 text-[var(--color-ink)] overflow-hidden border-t-8 border-[var(--color-peach)]"
     >
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center md:items-start gap-8">
         {/* For both the header & body text */}

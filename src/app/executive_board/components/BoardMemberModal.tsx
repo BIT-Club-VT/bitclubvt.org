@@ -26,6 +26,8 @@ export default function BoardMemberModal({
   const [isClosing, setIsClosing] = useState(false);
   const isClosingRef = useRef(false);
   const dialogRef = useRef<HTMLDialogElement>(null);
+  const panelRef = useRef<HTMLDivElement>(null);
+  const titleRef = useRef<HTMLHeadingElement>(null);
   const titleId = useId();
   const descriptionId = useId();
 
@@ -48,6 +50,11 @@ export default function BoardMemberModal({
     const previousOverflow = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     dialog.showModal();
+    titleRef.current?.focus({ preventScroll: true });
+
+    if (panelRef.current) {
+      panelRef.current.scrollTop = 0;
+    }
 
     return () => {
       document.body.style.overflow = previousOverflow;
@@ -78,6 +85,7 @@ export default function BoardMemberModal({
         }}
       >
         <div
+          ref={panelRef}
           className={`${
             isClosing ? "board-modal-panel-out" : "board-modal-panel-in"
           } relative flex max-h-[calc(100dvh-2rem)] w-full max-w-3xl flex-col overflow-y-auto rounded-2xl bg-[#FDF8E8] p-6 pt-16 shadow-xl md:flex-row md:items-start md:pt-6`}
@@ -91,7 +99,12 @@ export default function BoardMemberModal({
           </div>
 
           <div className="min-w-0 flex-1">
-            <h3 id={titleId} className="text-2xl font-bold text-[#861F41]">
+            <h3
+              ref={titleRef}
+              id={titleId}
+              tabIndex={-1}
+              className="text-2xl font-bold text-[#861F41] focus:outline-none"
+            >
               {member.name}
             </h3>
             <p className="mb-4 font-medium text-[#B83A20]">{member.degree}</p>
@@ -113,7 +126,6 @@ export default function BoardMemberModal({
           <button
             type="button"
             aria-label="Close board member details"
-            autoFocus
             className="absolute right-3 top-3 flex h-12 w-12 cursor-pointer items-center justify-center rounded-full text-gray-500 transition-colors hover:bg-black/10 hover:text-black focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-[#861F41]"
             onClick={closeModal}
           >

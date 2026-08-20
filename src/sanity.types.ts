@@ -22,16 +22,23 @@ export type SanityImageAssetReference = {
   [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
 };
 
-export type MarketingPage = {
+export type Event = {
   _id: string;
-  _type: "marketingPage";
+  _type: "event";
   _createdAt: string;
   _updatedAt: string;
   _rev: string;
-  title?: string;
+  name?: string;
   slug?: Slug;
-  summary?: string;
-  heroImage?: {
+  date?: string;
+  startTime?: string;
+  endTime?: string;
+  location?: {
+    name?: string;
+    address?: string;
+    mapUrl?: string;
+  };
+  image?: {
     asset?: SanityImageAssetReference;
     media?: unknown;
     hotspot?: SanityImageHotspot;
@@ -39,14 +46,14 @@ export type MarketingPage = {
     alt?: string;
     _type: "image";
   };
-  body?: Array<{
+  description?: Array<{
     children?: Array<{
       marks?: Array<string>;
       text?: string;
       _type: "span";
       _key: string;
     }>;
-    style?: "normal" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "blockquote";
+    style?: "normal" | "h2" | "h3";
     listItem?: "bullet" | "number";
     markDefs?: Array<{
       href?: string;
@@ -55,6 +62,12 @@ export type MarketingPage = {
     }>;
     level?: number;
     _type: "block";
+    _key: string;
+  }>;
+  links?: Array<{
+    title?: string;
+    url?: string;
+    _type: "eventLink";
     _key: string;
   }>;
 };
@@ -180,7 +193,7 @@ export type Geopoint = {
 
 export type AllSanitySchemaTypes =
   | SanityImageAssetReference
-  | MarketingPage
+  | Event
   | SanityImageCrop
   | SanityImageHotspot
   | Slug
@@ -194,30 +207,88 @@ export type AllSanitySchemaTypes =
   | Geopoint;
 
 // Source: ../bitclubvt.org/src/sanity/lib/queries.ts
-// Variable: MARKETING_PAGE_QUERY
-// Query: *[_type == "marketingPage" && slug.current == $slug][0] {    _id,    _type,    title,    slug,    summary,    heroImage,    body  }
-export type MARKETING_PAGE_QUERY_RESULT = {
+// Variable: EVENT_SLUGS_QUERY
+// Query: *[    _type == "event" &&    defined(slug.current) &&    defined(date) &&    defined(startTime) &&    defined(endTime)  ] | order(slug.current asc) {    "slug": slug.current  }
+export type EVENT_SLUGS_QUERY_RESULT = Array<{
+  slug: string | null;
+}>;
+
+// Source: ../bitclubvt.org/src/sanity/lib/queries.ts
+// Variable: ALL_EVENTS_QUERY
+// Query: *[    _type == "event" &&    defined(slug.current) &&    defined(date) &&    defined(startTime) &&    defined(endTime)  ] | order(date asc, startTime asc, _id asc) {    _id,    name,    "slug": slug.current,    date,    startTime,    endTime,    location {      name,      address,      mapUrl    },    image {      _type,      alt,      crop,      hotspot,      asset->{        _id,        url,        metadata {          lqip,          dimensions {            width,            height,            aspectRatio          }        }      }    }  }
+export type ALL_EVENTS_QUERY_RESULT = Array<{
   _id: string;
-  _type: "marketingPage";
-  title: string | null;
-  slug: Slug | null;
-  summary: string | null;
-  heroImage: {
-    asset?: SanityImageAssetReference;
-    media?: unknown;
-    hotspot?: SanityImageHotspot;
-    crop?: SanityImageCrop;
-    alt?: string;
-    _type: "image";
+  name: string | null;
+  slug: string | null;
+  date: string | null;
+  startTime: string | null;
+  endTime: string | null;
+  location: {
+    name: string | null;
+    address: string | null;
+    mapUrl: string | null;
   } | null;
-  body: Array<{
+  image: {
+    _type: "image";
+    alt: string | null;
+    crop: SanityImageCrop | null;
+    hotspot: SanityImageHotspot | null;
+    asset: {
+      _id: string;
+      url: string | null;
+      metadata: {
+        lqip: string | null;
+        dimensions: {
+          width: number | null;
+          height: number | null;
+          aspectRatio: number | null;
+        } | null;
+      } | null;
+    } | null;
+  } | null;
+}>;
+
+// Source: ../bitclubvt.org/src/sanity/lib/queries.ts
+// Variable: EVENT_QUERY
+// Query: *[_type == "event" && slug.current == $slug][0] {    _id,    name,    "slug": slug.current,    date,    startTime,    endTime,    location {      name,      address,      mapUrl    },    image {      _type,      alt,      crop,      hotspot,      asset->{        _id,        url,        metadata {          lqip,          dimensions {            width,            height,            aspectRatio          }        }      }    },    description,    links[]{      _key,      title,      url    }  }
+export type EVENT_QUERY_RESULT = {
+  _id: string;
+  name: string | null;
+  slug: string | null;
+  date: string | null;
+  startTime: string | null;
+  endTime: string | null;
+  location: {
+    name: string | null;
+    address: string | null;
+    mapUrl: string | null;
+  } | null;
+  image: {
+    _type: "image";
+    alt: string | null;
+    crop: SanityImageCrop | null;
+    hotspot: SanityImageHotspot | null;
+    asset: {
+      _id: string;
+      url: string | null;
+      metadata: {
+        lqip: string | null;
+        dimensions: {
+          width: number | null;
+          height: number | null;
+          aspectRatio: number | null;
+        } | null;
+      } | null;
+    } | null;
+  } | null;
+  description: Array<{
     children?: Array<{
       marks?: Array<string>;
       text?: string;
       _type: "span";
       _key: string;
     }>;
-    style?: "blockquote" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "normal";
+    style?: "h2" | "h3" | "normal";
     listItem?: "bullet" | "number";
     markDefs?: Array<{
       href?: string;
@@ -228,12 +299,19 @@ export type MARKETING_PAGE_QUERY_RESULT = {
     _type: "block";
     _key: string;
   }> | null;
+  links: Array<{
+    _key: string;
+    title: string | null;
+    url: string | null;
+  }> | null;
 } | null;
 
 // Query TypeMap
 import "@sanity/client";
 declare module "@sanity/client" {
   interface SanityQueries {
-    '\n  *[_type == "marketingPage" && slug.current == $slug][0] {\n    _id,\n    _type,\n    title,\n    slug,\n    summary,\n    heroImage,\n    body\n  }\n': MARKETING_PAGE_QUERY_RESULT;
+    '\n  *[\n    _type == "event" &&\n    defined(slug.current) &&\n    defined(date) &&\n    defined(startTime) &&\n    defined(endTime)\n  ] | order(slug.current asc) {\n    "slug": slug.current\n  }\n': EVENT_SLUGS_QUERY_RESULT;
+    '\n  *[\n    _type == "event" &&\n    defined(slug.current) &&\n    defined(date) &&\n    defined(startTime) &&\n    defined(endTime)\n  ] | order(date asc, startTime asc, _id asc) {\n    _id,\n    name,\n    "slug": slug.current,\n    date,\n    startTime,\n    endTime,\n    location {\n      name,\n      address,\n      mapUrl\n    },\n    image {\n      _type,\n      alt,\n      crop,\n      hotspot,\n      asset->{\n        _id,\n        url,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height,\n            aspectRatio\n          }\n        }\n      }\n    }\n  }\n': ALL_EVENTS_QUERY_RESULT;
+    '\n  *[_type == "event" && slug.current == $slug][0] {\n    _id,\n    name,\n    "slug": slug.current,\n    date,\n    startTime,\n    endTime,\n    location {\n      name,\n      address,\n      mapUrl\n    },\n    image {\n      _type,\n      alt,\n      crop,\n      hotspot,\n      asset->{\n        _id,\n        url,\n        metadata {\n          lqip,\n          dimensions {\n            width,\n            height,\n            aspectRatio\n          }\n        }\n      }\n    },\n    description,\n    links[]{\n      _key,\n      title,\n      url\n    }\n  }\n': EVENT_QUERY_RESULT;
   }
 }

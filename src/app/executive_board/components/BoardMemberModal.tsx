@@ -90,11 +90,12 @@ export default function BoardMemberModal({
             isClosing ? "board-modal-panel-out" : "board-modal-panel-in"
           } relative flex max-h-[calc(100dvh-2rem)] w-full max-w-3xl flex-col overflow-y-auto rounded-2xl bg-[var(--color-paper)] p-6 pt-16 text-[var(--color-ink)] shadow-xl md:flex-row md:items-start md:pt-6`}
         >
-          <div className="mb-6 flex flex-none justify-center md:mb-0 md:mr-6">
+          <div className="mx-auto mb-6 flex w-full max-w-xs flex-none justify-center md:mx-0 md:mb-0 md:mr-6 md:w-72">
             <Image
               src={member.imageSrc}
               alt={`Portrait of ${member.name}`}
               className="h-auto max-h-[55dvh] w-auto max-w-full rounded-xl object-contain shadow-md ring-1 ring-[var(--color-image-ring)] md:max-h-[calc(100dvh-6rem)]"
+              sizes="(min-width: 768px) 288px, min(320px, calc(100vw - 5rem))"
             />
           </div>
 

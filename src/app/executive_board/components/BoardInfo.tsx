@@ -39,7 +39,7 @@ export default function BoardInfo({ groups }: BoardInfoProps) {
               {group.title}
             </h2>
 
-            <div className="flex flex-wrap justify-center gap-4 sm:gap-6 md:gap-8">
+            <div className="mx-auto flex max-w-[904px] flex-wrap justify-center gap-4 sm:gap-6 md:gap-8">
               {group.members.map((member) => (
                 <button
                   key={member.name}

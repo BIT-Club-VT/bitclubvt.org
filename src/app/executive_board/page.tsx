@@ -4,118 +4,37 @@ import Footer from "../components/Footer";
 import ImageFrame from "./components/ImageFrame";
 import ImageHeader from "./components/ImageHeader";
 import Navbar from "../components/Navbar";
-import currentBoardPhoto from "../../../public/exec_board_photos/group_photos/current_board_photo/BITBoard2025_2026_alt.jpg";
+import currentBoardPhoto from "../../../public/exec_board_photos/group_photos/current_board_photo/BITBoard2026_2027.jpg";
+import boardPhoto2025 from "../../../public/exec_board_photos/group_photos/previous_board_photos/BITBoard2025_2026_alt.jpg";
 import boardPhoto2024 from "../../../public/exec_board_photos/group_photos/previous_board_photos/BITBoard2024_2025.jpg";
 import boardPhoto2023 from "../../../public/exec_board_photos/group_photos/previous_board_photos/BITBoard2023_2024_optimized.jpg";
 import asmaAdibaPhoto from "../../../public/exec_board_photos/headshots/asma_adiba.jpg";
 import bradyCookPhoto from "../../../public/exec_board_photos/headshots/brady_cook.jpg";
 import cheikhSambPhoto from "../../../public/exec_board_photos/headshots/cheikh_samb.jpg";
-import christopherZhongPhoto from "../../../public/exec_board_photos/headshots/christopher_zhong.jpg";
-import emanTukuPhoto from "../../../public/exec_board_photos/headshots/eman_tuku.jpg";
-import madisonBuiPhoto from "../../../public/exec_board_photos/headshots/madison_bui.jpg";
-import meghanaGundaPhoto from "../../../public/exec_board_photos/headshots/meghana_gunda.jpg";
-import narenKotaPhoto from "../../../public/exec_board_photos/headshots/naren_kota.jpg";
 import nihalPrasadPhoto from "../../../public/exec_board_photos/headshots/nihal_prasad.jpg";
 import romanWillisPhoto from "../../../public/exec_board_photos/headshots/roman_willis.jpg";
 import sashaZeltserPhoto from "../../../public/exec_board_photos/headshots/sasha_zeltser.jpg";
 import tanviAggarwalPhoto from "../../../public/exec_board_photos/headshots/tanvi_aggarwal.jpg";
 import tvesaSoniPhoto from "../../../public/exec_board_photos/headshots/tvesa_soni.jpg";
+import carterHawkinsPhoto from "../../../public/exec_board_photos/headshots/carter_hawkins.jpg";
+import bhavyaChebattinaPhoto from "../../../public/exec_board_photos/headshots/bhavya_chebattina.jpg";
+import nathanTonPhoto from "../../../public/exec_board_photos/headshots/nathan_ton.jpg";
+import amandaKhongPhoto from "../../../public/exec_board_photos/headshots/amanda_khong.jpg";
+import shrikhabalajiPhoto from "../../../public/exec_board_photos/headshots/shrikha_balaji.jpg";
 
 export const metadata: Metadata = {
   title: "Exec Board",
 };
 
-const presidentGroups: BoardGroup[] = [
+const adminGroup: BoardGroup[] = [
   {
-    title: "Presidents",
-    members: [
-      {
-        name: "Madison Bui",
-        position: "President",
-        degree: "Senior | BIT-CMA",
-        imageSrc: madisonBuiPhoto,
-        bio: (
-          <>
-            <b>Fun Fact:</b> I love to cook for my friends and family and lift
-            heavy at the gym! <br />
-            <b>Favorite Club Memory:</b> Our Hot Chocolate Social!
-          </>
-        ),
-        linkedin: "https://www.linkedin.com/in/madison-bui-63b5821b9/",
-      },
-      {
-        name: "Christopher Zhong",
-        position: "Vice President",
-        degree: "Senior | BIT-CMA",
-        imageSrc: christopherZhongPhoto,
-        bio: (
-          <>
-            <b>Fun Fact:</b> I did over 1,000 miles of biking over the pandemic!{" "}
-            <br />
-            <b>Favorite Club Memory:</b> Hiking to cascades freshman year and
-            grilling on the waterfall!
-          </>
-        ),
-        linkedin: "https://www.linkedin.com/in/christopheryzhong/",
-      },
-    ],
-  },
-];
-
-const committeeGroups: BoardGroup[] = [
-  {
-    title: "Events Committee",
-    members: [
-      {
-        name: "Sasha Zeltser",
-        position: "Events Chair",
-        degree: "Junior | BIT-CMA",
-        imageSrc: sashaZeltserPhoto,
-        bio: (
-          <>
-            <b>Fun Fact:</b> I can speak Russian! <br />
-            <b>Favorite Club Memory:</b> Collaborating with Accenture Financial
-            Services!
-          </>
-        ),
-        linkedin: "https://www.linkedin.com/in/sasha-zeltser-b3958528b/",
-      },
-      {
-        name: "Eman Tuku",
-        position: "Socials Chair",
-        degree: "Senior | BIT-DSS",
-        imageSrc: emanTukuPhoto,
-        bio: (
-          <>
-            <b>Fun Fact:</b> I was born in Minnesota! <br />
-            <b>Favorite Club Memory:</b> Social events and board bonding!
-          </>
-        ),
-        linkedin: "https://www.linkedin.com/in/eman-tuku/",
-      },
-      {
-        name: "Asma Abida",
-        position: "Treasurer & Secretary",
-        degree: "Junior | BIT",
-        imageSrc: asmaAdibaPhoto,
-        bio: (
-          <>
-            <b>Fun Fact:</b> I can speak 4 languages! <br />
-            <b>Favorite Club Memory:</b> The Deloitte Resume Workshop!
-          </>
-        ),
-        linkedin: "https://www.linkedin.com/in/adibaasma/",
-      },
-    ],
-  },
-  {
-    title: "Marketing Committee",
+    title: "Admin",
     members: [
       {
         name: "Roman Willis",
-        position: "Director of Marketing",
+        position: "President",
         degree:
-          "Sophomore | BIT-CMA and National Security & Foreign Affairs (Minor)",
+          "Junior | BIT-CMA and National Security & Foreign Affairs (Minor)",
         imageSrc: romanWillisPhoto,
         bio: (
           <>
@@ -127,30 +46,22 @@ const committeeGroups: BoardGroup[] = [
         linkedin: "https://www.linkedin.com/in/roman-willis/",
       },
       {
-        name: "Naren Kota",
-        position: "Director of Communications",
-        degree: "Senior | BIT-CMA",
-        imageSrc: narenKotaPhoto,
+        name: "Asma Abida",
+        position: "External Vice President",
+        degree: "Senior | BIT",
+        imageSrc: asmaAdibaPhoto,
         bio: (
           <>
-            <b>Fun Fact:</b> I love pickleball! <br />
-            <b>Favorite Club Memory:</b> Being at gobblerfest :)
+            <b>Fun Fact:</b> I can speak 4 languages! <br />
+            <b>Favorite Club Memory:</b> The Deloitte Resume Workshop!
           </>
         ),
-        linkedin: "https://www.linkedin.com/in/naren-kota/",
+        linkedin: "https://www.linkedin.com/in/adibaasma/",
       },
-    ],
-  },
-];
-
-const supportGroups: BoardGroup[] = [
-  {
-    title: "Web Design Committee",
-    members: [
       {
         name: "Brady Cook",
-        position: "Web Design Chair",
-        degree: "Sophomore | BIT-CMA",
+        position: "Internal Vice President",
+        degree: "Junior | BIT-CMA",
         imageSrc: bradyCookPhoto,
         bio: (
           <>
@@ -161,29 +72,25 @@ const supportGroups: BoardGroup[] = [
         ),
         linkedin: "https://www.linkedin.com/in/bradypcook/",
       },
-    ],
-  },
-  {
-    title: "Advisory Board",
-    members: [
       {
-        name: "Meghana (Meg) Gunda",
-        position: "Senior Advisor",
-        degree: "Senior | BIT-CMA",
-        imageSrc: meghanaGundaPhoto,
+        name: "Nihal (Sunny) Prasad",
+        position: "Treasurer",
+        degree: "Junior | FCFA & FCFM",
+        imageSrc: nihalPrasadPhoto,
         bio: (
           <>
-            <b>Fun Fact:</b> I love going out and trying new things! <br />
-            <b>Favorite Club Memory:</b> The hot chocolate and resume review
-            event!
+            <b>Fun Fact:</b> I recently got published by a literary magazine.{" "}
+            <br />
+            <b>Favorite Club Memory:</b> Collaborating with great professionals
+            from companies like CGI, Deloitte, and EY. semester.
           </>
         ),
-        linkedin: "https://www.linkedin.com/in/meghana-gunda-040577210/",
+        linkedin: "https://www.linkedin.com/in/nihalprasad/",
       },
       {
         name: "Tanvi Aggarwal",
-        position: "Junior Advisor",
-        degree: "Sophomore | BIT-DSS",
+        position: "Treasurer",
+        degree: "Junior | BIT-DSS",
         imageSrc: tanviAggarwalPhoto,
         bio: (
           <>
@@ -196,48 +103,131 @@ const supportGroups: BoardGroup[] = [
         ),
         linkedin: "https://www.linkedin.com/in/tanvi-aggarwal-52a7262b1/",
       },
+    ],
+  },
+];
+
+const marketingAndEvents: BoardGroup[] = [
+  {
+    title: "Marketing and Events",
+    members: [
+      {
+        name: "Bhavya Chebattina",
+        position: "Director of Marketing",
+        degree: "Junior | BIT-DSS",
+        imageSrc: bhavyaChebattinaPhoto,
+        bio: (
+          <>
+            <b>Fun Fact:</b> I’ve been playing the violin for 14 years! <br />
+            <b>Favorite Club Memory:</b> Meeting everyone at the New Student
+            Social!
+          </>
+        ),
+        linkedin: "http://linkedin.com/in/bhavya-chebattina",
+      },
+      {
+        name: "Nathan Ton",
+        position: "Director of Communications",
+        degree: "Junior | BIT-CMA",
+        imageSrc: nathanTonPhoto,
+        bio: (
+          <>
+            <b>Fun Fact:</b> ? <br />
+            <b>Favorite Club Memory:</b> ?
+          </>
+        ),
+        linkedin: "https://www.linkedin.com/in/nathanton/",
+      },
+      {
+        name: "Amanda Khong",
+        position: "Content Chair",
+        degree: "Junior | BIT-DSS",
+        imageSrc: amandaKhongPhoto,
+        bio: (
+          <>
+            <b>Fun Fact:</b> ? <br />
+            <b>Favorite Club Memory:</b> ?
+          </>
+        ),
+        linkedin: "https://www.linkedin.com/in/amanda-khong-41a684382/",
+      },
       {
         name: "Tvesa Soni",
-        position: "Junior Advisor",
-        degree: "Sophomore | BIT-DSS",
+        position: "Social Chair",
+        degree: "Junior | BIT-DSS",
         imageSrc: tvesaSoniPhoto,
         bio: (
           <>
-            <b>Fun Fact:</b> I do sports photography! <br />
-            <b>Favorite Club Memory:</b> The resume workshop. I got some great
-            feedback on my resume!
+            <b>Fun Fact:</b> I jumped off a cliff in Switzerland! <br />
+            <b>Favorite Club Memory:</b> I loved our professional development
+            activities! Specifically Mocktails and Marketing Yourself, reviewing
+            resumes and cute drinks was so fun!!
           </>
         ),
         linkedin: "https://www.linkedin.com/in/tvesasoni/",
       },
       {
-        name: "Nihal (Sunny) Prasad",
-        position: "Junior Advisor",
-        degree: "Sophomore | BIT-CMA & Corporate Financal Management",
-        imageSrc: nihalPrasadPhoto,
-        bio: (
-          <>
-            <b>Fun Fact:</b> I write a lot and I will be published in several
-            literary magazines later this year (2025). <br />
-            <b>Favorite Club Memory:</b> The end-of-year celebration last
-            semester.
-          </>
-        ),
-        linkedin: "https://www.linkedin.com/in/nihalprasad/",
-      },
-      {
         name: "Cheikh Samb",
-        position: "Junior Advisor",
-        degree: "Junior | BIT",
+        position: "Social Chair",
+        degree: "Senior | BIT",
         imageSrc: cheikhSambPhoto,
         bio: (
           <>
-            <b>Fun Fact:</b> I haveve played basketball for over 15 years! <br />
+            <b>Fun Fact:</b> I haveve played basketball for over 15 years!{" "}
+            <br />
             <b>Favorite Club Memory:</b> Attending GobblerFest 2025 and meeting
             lots of new & returing Hokies!
           </>
         ),
         linkedin: "https://www.linkedin.com/in/cheikhsamb4/",
+      },
+      {
+        name: "Carter Hawkins",
+        position: "Web Developer",
+        degree: "Junior | CS",
+        imageSrc: carterHawkinsPhoto,
+        bio: (
+          <>
+            <b>Fun Fact:</b> I like to go hiking! <br />
+            <b>Favorite Club Memory:</b> Quesadilla & Grilled Cheese Night
+          </>
+        ),
+        linkedin: "https://www.linkedin.com/in/carterhawkinsvt/",
+      },
+    ],
+  },
+];
+
+const advisoryBoard: BoardGroup[] = [
+  {
+    title: "Advisory Board",
+    members: [
+      {
+        name: "Sasha Zeltser",
+        position: "Senior Advisor",
+        degree: "Senior | BIT-CMA",
+        imageSrc: sashaZeltserPhoto,
+        bio: (
+          <>
+            <b>Fun Fact:</b> I can speak Russian! <br />
+            <b>Favorite Club Memory:</b> Collaborating with Accenture Financial
+            Services!
+          </>
+        ),
+        linkedin: "https://www.linkedin.com/in/sasha-zeltser-b3958528b/",
+      },
+      {
+        name: "Shrikha Balaji",
+        position: "Junior Advisor",
+        degree: "BIT - MCA",
+        imageSrc: shrikhabalajiPhoto,
+        bio: (
+          <>
+            <b>Fun Fact:</b> ? <br />
+            <b>Favorite Club Memory:</b> ?
+          </>
+        ),
+        linkedin: "https://www.linkedin.com/in/shrikhabalaji/",
       },
     ],
   },
@@ -248,17 +238,23 @@ export default function ExecBoardPage() {
     <main>
       <Navbar />
 
-      <ImageHeader text="BIT Executive Board 2025-2026" />
-      <ImageFrame
-        imageSrc={currentBoardPhoto}
-        alt="BIT Board 2025-2026"
-      />
+      <ImageHeader text="BIT Executive Board 2026-2027" />
 
-      <BoardInfo groups={presidentGroups} />
-      <BoardInfo groups={committeeGroups} />
-      <BoardInfo groups={supportGroups} />
+      {/* 
+      TODO uncomment once we have updated current board photo
+      <ImageFrame imageSrc={currentBoardPhoto} alt="BIT Board 2026-2027" /> 
+      */}
+
+      <BoardInfo groups={adminGroup} />
+      <BoardInfo groups={marketingAndEvents} />
+      <BoardInfo groups={advisoryBoard} />
 
       <ImageHeader text="Previous Executive Boards" />
+      <ImageFrame
+        imageSrc={boardPhoto2025}
+        alt="BIT Board 2025-2026"
+        caption="BIT Board 2025-2026"
+      />
       <ImageFrame
         imageSrc={boardPhoto2024}
         alt="BIT Board 2024-2025"

@@ -35,7 +35,7 @@ export default function EventActionLinks({ links, variant }: EventActionLinksPro
               : "border border-[var(--color-teal-deep)] bg-white text-[var(--color-teal-deep)] hover:bg-[var(--color-peach)]";
 
           return (
-            <li key={link._key} className={isPrimary ? "w-full sm:w-auto" : ""}>
+            <li key={link._key} className="w-full sm:w-auto">
               <a
                 href={link.url}
                 target={isExternal ? "_blank" : undefined}

@@ -1,5 +1,3 @@
-"use client";
-import React from "react";
 import Image from "next/image";
 
 interface ResourceItem {
@@ -20,7 +18,7 @@ interface ResourceBoxProps {
 export default function ResourceBox({ title, resources }: ResourceBoxProps) {
   return (
     <section className="py-20 bg-[#FDF8E8] flex justify-center">
-      <div className="bg-[#F26645] rounded-2xl shadow-lg p-8 w-fit max-w-6xl">
+      <div className="bg-[#B83A20] rounded-2xl shadow-lg p-8 w-fit max-w-6xl">
         {/* Section Title */}
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-10 text-[#FDF8E8]">
           {title}
@@ -51,7 +49,7 @@ export default function ResourceBox({ title, resources }: ResourceBoxProps) {
 
                 {/* Optional Description */}
                 {resource.description && (
-                  <p className="text-sm text-[#F26645] mb-4">
+                  <p className="text-sm text-[#B83A20] mb-4">
                     {resource.description}
                   </p>
                 )}
@@ -62,7 +60,7 @@ export default function ResourceBox({ title, resources }: ResourceBoxProps) {
                     href={resource.buttonLink}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="mt-auto inline-block bg-[#F26645] text-[#FDF8E8] px-4 py-2 rounded-lg font-semibold hover:bg-[#D94E30] transition-all duration-300"
+                    className="mt-auto inline-block bg-[#B83A20] text-[#FDF8E8] px-4 py-2 rounded-lg font-semibold hover:bg-[#9F301D] transition-all duration-300"
                   >
                     {resource.buttonText || "View Resource"}
                   </a>

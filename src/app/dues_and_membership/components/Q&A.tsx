@@ -1,6 +1,3 @@
-"use client";
-import React from "react";
-
 interface QA {
   question: string;
   answer: string;
@@ -24,7 +21,7 @@ export default function QuestionsAndAnswers({ title, items }: QuestionsAndAnswer
         {items.map((qa, idx) => (
           <div key={idx} className="space-y-3">
             {/* Question */}
-            <h3 className="text-xl md:text-2xl font-semibold text-[#F26645]">
+            <h3 className="text-xl md:text-2xl font-semibold text-[#B83A20]">
               {qa.question}
             </h3>
 

@@ -23,10 +23,11 @@ export default function WhyJoinSection({ header, body, imageSrc }: WhyJoinUsProp
       { threshold: 0.2 }
     );
 
-    if (sectionRef.current) observer.observe(sectionRef.current);
+    const section = sectionRef.current;
+    if (section) observer.observe(section);
 
     return () => {
-      if (sectionRef.current) observer.unobserve(sectionRef.current);
+      if (section) observer.unobserve(section);
     };
   }, []);
 
@@ -35,7 +36,7 @@ export default function WhyJoinSection({ header, body, imageSrc }: WhyJoinUsProp
       {/* Orange rhombus-shaped background (inversed slope) */}
       <div className="absolute inset-0 overflow-hidden">
         <div
-          className="bg-[#F26645] absolute w-full h-full top-0 left-0"
+          className="bg-[#B83A20] absolute w-full h-full top-0 left-0"
           style={{
             clipPath: "polygon(0 0, 100% 10%, 100% 100%, 0% 90%)",
           }}

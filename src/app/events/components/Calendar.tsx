@@ -1,6 +1,3 @@
-"use client";
-import React from "react";
-
 export default function Calendar() {
   const calendarSrc =
     "https://calendar.google.com/calendar/embed?src=virginiatechbitclub%40gmail.com&ctz=America%2FNew_York";
@@ -32,7 +29,7 @@ export default function Calendar() {
               href={calendarSrc}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#fe9659] hover:text-[#d87a3b]"
+              className="text-[#B83A20] hover:text-[#861F41]"
             >
               HERE
             </a>

@@ -30,7 +30,7 @@ export default function Footer() {
   }, []);
 
   return (
-    <footer ref={footerRef} className="bg-[#39818f] text-white py-8 relative overflow-hidden">
+    <footer ref={footerRef} className="bg-[#2F6D78] text-white py-8 relative overflow-hidden">
       <div
       className={`max-w-7xl mx-auto text-center transition-all duration-3000 ease-out
       ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}

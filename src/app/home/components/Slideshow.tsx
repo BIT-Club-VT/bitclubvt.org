@@ -20,10 +20,26 @@ export default function MainPageSlideshow() {
 
   // Changes the image every 10 seconds. DO NOT TOUCH!!!
   useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % images.length);
-    }, 7500);
-    return () => clearInterval(interval);
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let interval: ReturnType<typeof setInterval> | undefined;
+
+    const updateSlideshow = () => {
+      if (interval) clearInterval(interval);
+
+      interval = mediaQuery.matches
+        ? undefined
+        : setInterval(() => {
+            setCurrent((prev) => (prev + 1) % images.length);
+          }, 7500);
+    };
+
+    updateSlideshow();
+    mediaQuery.addEventListener("change", updateSlideshow);
+
+    return () => {
+      if (interval) clearInterval(interval);
+      mediaQuery.removeEventListener("change", updateSlideshow);
+    };
   }, []);
 
   return (

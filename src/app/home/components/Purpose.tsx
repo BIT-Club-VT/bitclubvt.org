@@ -23,12 +23,11 @@ export default function PurposeSection({ header, body, imageSrc }: PurposeProps)
       { threshold: 0.2 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
+    const section = sectionRef.current;
+    if (section) observer.observe(section);
 
     return () => {
-      if (sectionRef.current) observer.unobserve(sectionRef.current);
+      if (section) observer.unobserve(section);
     };
   }, []);
 

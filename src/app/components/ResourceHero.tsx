@@ -1,5 +1,3 @@
-"use client";
-import React from "react";
 import Link from "next/link";
 
 interface ResourceHeroProps {
@@ -30,7 +28,7 @@ export default function ResourceHero({
               (Psst... want access to more resources, insider tips, and to connect with your peers? Check out our{" "}
               <Link
                 href="/events"
-                className="text-[#F26645] underline hover:text-[#d35438] transition-colors duration-200"
+                className="text-[#B83A20] underline hover:text-[#861F41] transition-colors duration-200"
               >
                 Events page
               </Link>{" "}

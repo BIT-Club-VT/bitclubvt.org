@@ -2,7 +2,7 @@ import Navbar from '@/app/components/Navbar'
 import Footer from '../components/Footer';
 import type { Metadata } from 'next';
 import EventsByDate from './components/EventsByDate';
-import { buildClient } from '@/sanity/lib/client';
+import { buildClient } from '@/sanity/lib/buildClient';
 import { ALL_EVENTS_QUERY } from '@/sanity/lib/queries';
 import { getEasternTodayDate } from './lib/formatEventSchedule';
 

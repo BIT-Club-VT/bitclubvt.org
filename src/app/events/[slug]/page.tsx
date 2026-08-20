@@ -16,7 +16,7 @@ import AddToCalendarButton from "../components/AddToCalendarButton";
 import EventActionLinks, { type EventActionLink } from "../components/EventActionLinks";
 import EventDescription from "../components/EventDescription";
 import { formatEventSchedule } from "../lib/formatEventSchedule";
-import { buildClient } from "@/sanity/lib/client";
+import { buildClient } from "@/sanity/lib/buildClient";
 import { urlForImage } from "@/sanity/lib/image";
 import { EVENT_QUERY, EVENT_SLUGS_QUERY } from "@/sanity/lib/queries";
 

@@ -57,9 +57,9 @@ export default function GeneralResources() {
   return (
     <main>
       <Navbar />
-      <ResourceHero heroHeader="Resume & Cover Letter Templates"heroSubText="Hand picked by the BIT Club Exec Board to help you stand out." showSecondText={true}/> {/** heroSubText is blank so that only the title is shown*/}
+      <ResourceHero heroHeader="Resume & Cover Letter Templates" heroSubText="Hand-picked by the BIT Club Exec Board to help you stand out." showSecondText={true} /> {/** heroSubText is blank so that only the title is shown*/}
       <ResourceBox title="Resume & Cover Letter Templates" resources={resume_coverletterTemplates} />
-      <ResourceHero heroHeader="Want expert advice?" heroSubText="Visit Pamplin Career Services or VT's Career & Professional Development Center at the links below!"/>
+      <ResourceHero heroHeader="Want expert advice?" heroSubText="Visit Pamplin Career Services or VT's Career & Professional Development Center at the links below!" />
       <ResourceBox title="Virginia Tech Career Resources" resources={careerServices} />
       <Footer />
     </main>

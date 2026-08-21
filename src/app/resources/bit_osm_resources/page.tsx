@@ -67,7 +67,7 @@ export default function BITOSMResources() {
     },
     {
       title: "Let's Talk Supply Chain Podcast",
-      description: "Listen to the Let's Talk Supply Chain Podcast, hosted by Sarah Barnes-Humphrey, where she brings on industry experts to talk about various SCM-related topics. ",
+      description: "Listen to the Let's Talk Supply Chain Podcast, hosted by Sarah Barnes-Humphrey, where she brings on industry experts to discuss various SCM-related topics.",
       imageSrc: "/main_logos_and_assets/logos/other_logos/lets_talk_supply_chain.png",
       buttonText: "Let's Talk Supply Chain",
       buttonLink: "https://letstalksupplychain.com/",

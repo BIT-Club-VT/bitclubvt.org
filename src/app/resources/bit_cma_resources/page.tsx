@@ -41,24 +41,24 @@ export default function BITCMAResources() {
       buttonLink: "https://www.cisco.com/site/us/en/learn/training-certifications/certifications/enterprise/ccna/index.html",
     },
     {
-      title: "AWS Certified Security - Speciality",
+      title: "AWS Certified Security - Specialty",
       description: "Proves advanced expertise in securing cloud environments and applications on the AWS platform.",
       imageSrc: "/main_logos_and_assets/logos/other_logos/aws_certified_security_specialty.png",
-      buttonText: "AWS Certified Security - Speciality",
+      buttonText: "AWS Certified Security - Specialty",
       buttonLink: "https://aws.amazon.com/certification/certified-security-specialty/",
     },
   ];
   const careerRoadMap = [
     {
       title: "Security Certification Roadmap",
-      description: "Lets you explore what certifications to take in the future.",
+      description: "Lets you explore which certifications to take in the future.",
       imageSrc: "/main_logos_and_assets/assets/security_certification_roadmap.png",
       buttonText: "Certification Roadmap",
       buttonLink: "https://pauljerimy.com/security-certification-roadmap/",
     },
     {
       title: "Cyberseek Career Pathway",
-      description: "Lets you view various careers within cybersecurity.",
+      description: "Lets you explore various careers within cybersecurity.",
       imageSrc: "/main_logos_and_assets/assets/cyberseek_home.png",
       buttonText: "Cyberseek Career Pathway",
       buttonLink: "https://www.cyberseek.org/pathway.html",
@@ -67,21 +67,21 @@ export default function BITCMAResources() {
   const otherResources = [
     {
       title: "Professor Messer",
-      description: "Professor Messer is a Youtuber who publishes helpful study & educational content for CompTIA certs and other cybersecurity topics.",
+      description: "Professor Messer is a YouTuber who publishes helpful study and educational content for CompTIA certs and other cybersecurity topics.",
       imageSrc: "/main_logos_and_assets/logos/other_logos/professor_messer_logo.png",
       buttonText: "View Professor Messer's Channel",
       buttonLink: "https://www.youtube.com/user/professormesser",
     },
     {
       title: "HackTheBox",
-      description: "HackTheBox is a website that allows you to grow your cybersecurity knowledge by competing in CTFs and other real-world exercises",
+      description: "HackTheBox is a website that allows you to grow your cybersecurity knowledge by competing in CTFs and other real-world exercises.",
       imageSrc: "/main_logos_and_assets/assets/hackthebox_resized.webp",
       buttonText: "HackTheBox",
       buttonLink: "https://www.hackthebox.com/",
     },
     {
       title: "TryHackMe",
-      description: "TryHackMe is a website that has several cybersecurity-related modules where you can learn important concepts, as well as practice by completing real-world tasks. ",
+      description: "TryHackMe is a website that offers several cybersecurity-related modules where you can learn important concepts and practice by completing real-world tasks.",
       imageSrc: "/main_logos_and_assets/assets/tryhackme_resized.webp",
       buttonText: "TryHackMe",
       buttonLink: "https://tryhackme.com/",

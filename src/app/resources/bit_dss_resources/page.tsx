@@ -16,7 +16,7 @@ export default function BITDSSResources() {
       title: "Microsoft Certified: Power BI Data Analyst Associate",
       description: "Validates your ability to prepare, model, visualize, and analyze data using Microsoft Power BI to drive business insights.",
       imageSrc: "/main_logos_and_assets/logos/other_logos/microsoft_powerbi_certified.svg",
-      buttonText: "PowerBI Certification",
+      buttonText: "Power BI Certification",
       buttonLink: "https://learn.microsoft.com/en-us/credentials/certifications/data-analyst-associate/",
     },
     {
@@ -53,21 +53,21 @@ export default function BITDSSResources() {
   const otherResources = [
     {
       title: "LinkedIn Learning: Become a Data Analyst",
-      description: "This course on LinkedIn learning outlines the career of a data analyst, and it helps you explore this career field. NOTE: VT students can get LinkedIn learning for free",
+      description: "This course on LinkedIn Learning outlines the career of a data analyst and helps you explore this field. NOTE: VT students can get LinkedIn Learning for free.",
       imageSrc: "/main_logos_and_assets/assets/ll_dataanalyst.png",
       buttonText: "Becoming a Data Analyst",
       buttonLink: "https://www.linkedin.com/learning/paths/become-a-data-analyst",
     },
     {
       title: "Microsoft Data Analytics",
-      description: "This mini-course explores the role in data analysis and describes how to use software such as PowerBI.",
+      description: "This mini-course explores the role in data analysis and describes how to use software such as Power BI.",
       imageSrc: "/main_logos_and_assets/logos/other_logos/microsoft_da_logo.png",
       buttonText: "Microsoft Data Analytics",
       buttonLink: "https://learn.microsoft.com/en-us/training/paths/data-analytics-microsoft/",
     },
     {
       title: "Alex the Analyst",
-      description: "Alex the Analyst is a Youtuber who publishes content related to breaking in the field of data analytics/DSS and helpful content within the industry.",
+      description: "Alex the Analyst is a YouTuber who publishes content related to breaking into the field of data analytics/DSS and other helpful industry insights.",
       imageSrc: "/main_logos_and_assets/logos/other_logos/alextheanalyst_logo.png",
       buttonText: "Alex the Analyst",
       buttonLink: "https://www.youtube.com/@AlexTheAnalyst",

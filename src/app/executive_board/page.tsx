@@ -46,7 +46,7 @@ const adminGroup: BoardGroup[] = [
         linkedin: "https://www.linkedin.com/in/roman-willis/",
       },
       {
-        name: "Asma Abida",
+        name: "Asma Adiba",
         position: "External Vice President",
         degree: "Senior | BIT",
         imageSrc: asmaAdibaPhoto,
@@ -82,7 +82,7 @@ const adminGroup: BoardGroup[] = [
             <b>Fun Fact:</b> I recently got published by a literary magazine.{" "}
             <br />
             <b>Favorite Club Memory:</b> Collaborating with great professionals
-            from companies like CGI, Deloitte, and EY. semester.
+            from companies like CGI, Deloitte, and EY.
           </>
         ),
         linkedin: "https://www.linkedin.com/in/nihalprasad/",
@@ -173,10 +173,10 @@ const marketingAndEvents: BoardGroup[] = [
         imageSrc: cheikhSambPhoto,
         bio: (
           <>
-            <b>Fun Fact:</b> I haveve played basketball for over 15 years!{" "}
+            <b>Fun Fact:</b> I have played basketball for over 15 years!{" "}
             <br />
             <b>Favorite Club Memory:</b> Attending GobblerFest 2025 and meeting
-            lots of new & returing Hokies!
+            lots of new & returning Hokies!
           </>
         ),
         linkedin: "https://www.linkedin.com/in/cheikhsamb4/",

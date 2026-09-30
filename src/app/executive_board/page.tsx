@@ -173,8 +173,7 @@ const marketingAndEvents: BoardGroup[] = [
         imageSrc: cheikhSambPhoto,
         bio: (
           <>
-            <b>Fun Fact:</b> I have played basketball for over 15 years!{" "}
-            <br />
+            <b>Fun Fact:</b> I have played basketball for over 15 years! <br />
             <b>Favorite Club Memory:</b> Attending GobblerFest 2025 and meeting
             lots of new & returning Hokies!
           </>
@@ -219,12 +218,16 @@ const advisoryBoard: BoardGroup[] = [
       {
         name: "Shrikha Balaji",
         position: "Junior Advisor",
-        degree: "BIT - MCA",
+        degree: "Junior | MCA & CMA",
         imageSrc: shrikhabalajiPhoto,
         bio: (
           <>
-            <b>Fun Fact:</b> ? <br />
-            <b>Favorite Club Memory:</b> ?
+            <b>Fun Fact:</b> I like to paint in my free time! <br />
+            <b>
+              Favorite Club Memory: I loved the KPMG networking event at Coffee
+              Labs!
+            </b>{" "}
+            ?
           </>
         ),
         linkedin: "https://www.linkedin.com/in/shrikhabalaji/",

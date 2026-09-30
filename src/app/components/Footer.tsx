@@ -80,7 +80,7 @@ export default function Footer() {
             </div>
           </a>
           {/* GobblerConnect Image (since an icon doesn't exist)*/}
-          <a href="https://gobblerconnect.vt.edu/organization/bitclub" target="_blank" rel="noopener noreferrer" aria-label="GobblerConnect" className="hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-peach)] transition duration-300">
+          <a href="https://gobblerconnect.vt.edu/feeds?type=club&type_id=36510" target="_blank" rel="noopener noreferrer" aria-label="GobblerConnect" className="hover:opacity-80 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-peach)] transition duration-300">
             <div className="flex justify-center items-center">
               <Image
                 src="/main_logos_and_assets/logos/other_logos/gobblerconnect_logo_transparent.png"

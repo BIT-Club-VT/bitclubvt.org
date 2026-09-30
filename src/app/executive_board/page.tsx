@@ -118,7 +118,7 @@ const marketingAndEvents: BoardGroup[] = [
         imageSrc: bhavyaChebattinaPhoto,
         bio: (
           <>
-            <b>Fun Fact:</b> I’ve been playing the violin for 14 years! <br />
+            <b>Fun Fact:</b> A own a custom banner painting business <br />
             <b>Favorite Club Memory:</b> Meeting everyone at the New Student
             Social!
           </>
@@ -141,12 +141,12 @@ const marketingAndEvents: BoardGroup[] = [
       {
         name: "Amanda Khong",
         position: "Content Chair",
-        degree: "Junior | BIT-DSS",
+        degree: "Sophemore | BIT-DSS",
         imageSrc: amandaKhongPhoto,
         bio: (
           <>
-            <b>Fun Fact:</b> ? <br />
-            <b>Favorite Club Memory:</b> ?
+            <b>Fun Fact:</b> I`m an Airbnb ambassador! <br />
+            <b>Favorite Club Memory:</b> Taking headshots for the BIT club
           </>
         ),
         linkedin: "https://www.linkedin.com/in/amanda-khong-41a684382/",
@@ -173,7 +173,7 @@ const marketingAndEvents: BoardGroup[] = [
         imageSrc: cheikhSambPhoto,
         bio: (
           <>
-            <b>Fun Fact:</b> I have played basketball for over 15 years! <br />
+            <b>Fun Fact:</b> I am a clothing brand owner <br />
             <b>Favorite Club Memory:</b> Attending GobblerFest 2025 and meeting
             lots of new & returning Hokies!
           </>
@@ -226,8 +226,7 @@ const advisoryBoard: BoardGroup[] = [
             <b>
               Favorite Club Memory: I loved the KPMG networking event at Coffee
               Labs!
-            </b>{" "}
-            ?
+            </b>
           </>
         ),
         linkedin: "https://www.linkedin.com/in/shrikhabalaji/",

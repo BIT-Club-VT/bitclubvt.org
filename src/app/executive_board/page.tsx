@@ -223,10 +223,8 @@ const advisoryBoard: BoardGroup[] = [
         bio: (
           <>
             <b>Fun Fact:</b> I like to paint in my free time! <br />
-            <b>
-              Favorite Club Memory: I loved the KPMG networking event at Coffee
-              Labs!
-            </b>
+            <b>Favorite Club Memory:</b> I loved the KPMG networking event at
+            Coffee Labs!
           </>
         ),
         linkedin: "https://www.linkedin.com/in/shrikhabalaji/",

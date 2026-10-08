@@ -35,6 +35,20 @@ export default function Footer() {
       className={`max-w-7xl mx-auto text-center transition-all duration-3000 ease-out
       ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"}`}
       >
+        <div className="mx-4 mb-8 border-b border-[var(--color-teal)] pb-8">
+          <h2 className="text-2xl sm:text-3xl">Stay in the loop</h2>
+          <p className="mt-3 text-lg">Subscribe to our newsletter for BIT Club updates.</p>
+          <a
+            href="https://nathans-newsletter-2810d1.beehiiv.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-5 inline-flex min-h-11 items-center justify-center rounded-lg bg-[var(--color-peach)] px-6 py-3 text-lg font-bold text-[var(--color-ink)] transition-colors duration-300 hover:bg-[var(--color-orange)] focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-peach)]"
+          >
+            Subscribe to the newsletter
+            <span className="sr-only"> (opens in a new tab)</span>
+          </a>
+        </div>
+
         {/* TEXT ABOVE ICONS */}
         <p
           className="text-2xl sm:text-3xl md:text-4xl mb-8"

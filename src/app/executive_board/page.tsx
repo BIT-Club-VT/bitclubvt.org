@@ -4,23 +4,23 @@ import Footer from "../components/Footer";
 import ImageFrame from "./components/ImageFrame";
 import ImageHeader from "./components/ImageHeader";
 import Navbar from "../components/Navbar";
-import currentBoardPhoto from "../../../public/exec_board_photos/group_photos/current_board_photo/BITBoard2026_2027.jpg";
+import currentBoardPhoto from "../../../public/exec_board_photos/group_photos/current_board_photo/BITBoard2026_2027.png";
 import boardPhoto2025 from "../../../public/exec_board_photos/group_photos/previous_board_photos/BITBoard2025_2026_alt.jpg";
 import boardPhoto2024 from "../../../public/exec_board_photos/group_photos/previous_board_photos/BITBoard2024_2025.jpg";
 import boardPhoto2023 from "../../../public/exec_board_photos/group_photos/previous_board_photos/BITBoard2023_2024_optimized.jpg";
 import asmaAdibaPhoto from "../../../public/exec_board_photos/headshots/asma_adiba.jpg";
-import bradyCookPhoto from "../../../public/exec_board_photos/headshots/brady_cook.jpg";
-import cheikhSambPhoto from "../../../public/exec_board_photos/headshots/cheikh_samb.jpg";
+import bradyCookPhoto from "../../../public/exec_board_photos/headshots/brady_cook.png";
+import cheikhSambPhoto from "../../../public/exec_board_photos/headshots/cheikh_samb.png";
 import nihalPrasadPhoto from "../../../public/exec_board_photos/headshots/nihal_prasad.jpg";
 import romanWillisPhoto from "../../../public/exec_board_photos/headshots/roman_willis.jpg";
 import sashaZeltserPhoto from "../../../public/exec_board_photos/headshots/sasha_zeltser.jpg";
-import tanviAggarwalPhoto from "../../../public/exec_board_photos/headshots/tanvi_aggarwal.jpg";
-import tvesaSoniPhoto from "../../../public/exec_board_photos/headshots/tvesa_soni.jpg";
-import carterHawkinsPhoto from "../../../public/exec_board_photos/headshots/carter_hawkins.jpg";
-import bhavyaChebattinaPhoto from "../../../public/exec_board_photos/headshots/bhavya_chebattina.jpg";
-import nathanTonPhoto from "../../../public/exec_board_photos/headshots/nathan_ton.jpg";
-import amandaKhongPhoto from "../../../public/exec_board_photos/headshots/amanda_khong.jpg";
-import shrikhabalajiPhoto from "../../../public/exec_board_photos/headshots/shrikha_balaji.jpg";
+import tanviAggarwalPhoto from "../../../public/exec_board_photos/headshots/tanvi_aggarwal.png";
+import tvesaSoniPhoto from "../../../public/exec_board_photos/headshots/tvesa_soni.png";
+import carterHawkinsPhoto from "../../../public/exec_board_photos/headshots/carter_hawkins.png";
+import bhavyaChebattinaPhoto from "../../../public/exec_board_photos/headshots/bhavya_chebattina.png";
+import nathanTonPhoto from "../../../public/exec_board_photos/headshots/nathan_ton.png";
+import amandaKhongPhoto from "../../../public/exec_board_photos/headshots/amanda_khong.png";
+import shrikhabalajiPhoto from "../../../public/exec_board_photos/headshots/shrikha_balaji.png";
 
 export const metadata: Metadata = {
   title: "Exec Board",
@@ -240,10 +240,7 @@ export default function ExecBoardPage() {
 
       <ImageHeader text="BIT Executive Board 2026-2027" />
 
-      {/* 
-      TODO uncomment once we have updated current board photo
-      <ImageFrame imageSrc={currentBoardPhoto} alt="BIT Board 2026-2027" /> 
-      */}
+      {<ImageFrame imageSrc={currentBoardPhoto} alt="BIT Board 2026-2027" />}
 
       <BoardInfo groups={adminGroup} />
       <BoardInfo groups={marketingAndEvents} />

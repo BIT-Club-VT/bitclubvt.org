@@ -4,21 +4,27 @@ interface ImageFrameProps {
   imageSrc: StaticImageData;
   alt: string;
   caption?: string;
+  imageClassName?: string;
+  frameClassName?: string;
 }
 
 export default function ImageFrame({
   imageSrc,
   alt,
   caption,
+  imageClassName,
+  frameClassName,
 }: ImageFrameProps) {
   return (
     <section className="py-24 bg-[var(--color-paper)] flex justify-center px-4">
-      <div className="bg-[var(--color-coral)] rounded-2xl shadow-lg p-10 sm:p-12 md:p-16 lg:p-20 xl:p-24 max-w-md sm:max-w-xl md:max-w-4xl lg:max-w-5xl w-full flex flex-col items-center">
+      <div
+        className={`bg-[var(--color-coral)] rounded-2xl shadow-lg p-10 sm:p-12 md:p-16 lg:p-20 xl:p-24 max-w-md sm:max-w-xl md:max-w-4xl lg:max-w-5xl w-full flex flex-col items-center ${frameClassName ?? ""}`}
+      >
         {/* Image */}
         <Image
           src={imageSrc}
           alt={alt}
-          className="h-auto w-full rounded-xl object-contain shadow-md"
+          className={`h-auto w-full rounded-xl object-contain shadow-md ${imageClassName ?? ""}`}
         />
 
         {/* Optional caption */}

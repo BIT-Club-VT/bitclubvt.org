@@ -240,7 +240,14 @@ export default function ExecBoardPage() {
 
       <ImageHeader text="BIT Executive Board 2026-2027" />
 
-      {<ImageFrame imageSrc={currentBoardPhoto} alt="BIT Board 2026-2027" />}
+      {
+        <ImageFrame
+          imageSrc={currentBoardPhoto}
+          alt="BIT Board 2026-2027"
+          imageClassName="max-w-md"
+          frameClassName="!w-fit max-w-full p-4 sm:p-6 md:p-8"
+        />
+      }
 
       <BoardInfo groups={adminGroup} />
       <BoardInfo groups={marketingAndEvents} />
